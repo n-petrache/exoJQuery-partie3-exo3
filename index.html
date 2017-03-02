@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <script src="jquery-2.2.4.js"></script>
+    <title></title>
+  </head>
+  <body>
+    <button type="button" name="button" onClick="jacta()">C'est parti !</button>
+    <input type="text" name="" value="">
+    <span></span>
+    <script>
+      var alea = Math.floor(Math.random()*101), cliq = 0;
+      function jacta(){
+        rep = $("input").val();
+        cliq++;
+        if (parseInt(rep) == alea){
+          alert("Bravo !\nIl vous a fallu " + cliq + " essais.");
+        }
+        else if (parseInt(rep) <= alea){
+          $("span").text("Plus");
+        }
+        else if (parseInt(rep) >= alea){
+          $("span").text("Moins");
+        }
+        else {
+          $("span").text("Veuillez entrer un nombre compris entre 0 et 100.");
+        }
+      };
+    </script>
+  </body>
+</html>
